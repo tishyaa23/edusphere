@@ -3,8 +3,8 @@
 <img width="1678" height="918" alt="image" src="https://github.com/user-attachments/assets/5cb3245b-5046-4f0c-ae27-e92cbf165d58" />\
 
 ## Sleek dashboard
+<img width="1763" height="916" alt="image" src="https://github.com/user-attachments/assets/bcbc5336-8912-4f09-8f76-652a9f852ff2" />
 
-<img width="1835" height="913" alt="image" src="https://github.com/user-attachments/assets/898aa3ee-8627-4b33-8ec4-8d599b98f4af" />
 
 ## Learn and give quizzes
 
