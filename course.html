@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - EduSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="catalog.html" class="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                    <span class="text-2xl">📚</span>
+                    <span>EduSphere</span>
+                </a>
+                <button onclick="window.location.href='catalog.html'" class="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    <span class="font-medium">Back to Courses</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="courseHero" class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex-1 text-white">
+                    <span id="heroCategory" class="inline-block px-3 py-1 text-xs font-semibold tracking-wider bg-white/20 backdrop-blur-sm rounded-full mb-4">TECHNOLOGY</span>
+                    <h1 id="heroTitle" class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Course Title</h1>
+                    <p id="heroDescription" class="text-lg text-white/90 max-w-2xl">Course description goes here</p>
+                </div>
+                <div id="heroIcon" class="text-8xl md:text-9xl opacity-90">🎨</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Course Overview -->
+                <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Course Overview</h2>
+                    <p id="courseOverview" class="text-gray-700 leading-relaxed">Loading course content...</p>
+                </div>
+
+                <!-- Instructor -->
+                <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Meet Your Instructor</h2>
+                    <div class="flex items-start space-x-6">
+                        <div id="instructorAvatar" class="text-6xl flex-shrink-0 bg-gradient-to-br from-blue-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center">👤</div>
+                        <div>
+                            <h3 id="instructorName" class="text-xl font-bold text-gray-900 mb-2">Instructor Name</h3>
+                            <p id="instructorBio" class="text-gray-600 leading-relaxed">Instructor bio goes here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Resources</h2>
+                    <ul id="resourcesList" class="space-y-3">
+                        <li><a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 p-3 rounded-lg transition-all">
+                            <span>📄</span>
+                            <span>Resource 1</span>
+                        </a></li>
+                        <li><a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 p-3 rounded-lg transition-all">
+                            <span>📄</span>
+                            <span>Resource 2</span>
+                        </a></li>
+                        <li><a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 p-3 rounded-lg transition-all">
+                            <span>📄</span>
+                            <span>Resource 3</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-sm p-8 sticky top-24 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Course Details</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Duration</span>
+                            <span id="infoDuration" class="text-gray-900 font-semibold">8 weeks</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Level</span>
+                            <span id="infoLevel" class="text-gray-900 font-semibold">Beginner</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Students</span>
+                            <span id="infoStudents" class="text-gray-900 font-semibold">1,234</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="text-gray-600 font-medium">Language</span>
+                            <span class="text-gray-900 font-semibold">English</span>
+                        </div>
+                    </div>
+
+                    <button onclick="startQuiz()" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                        <span>Start Quiz</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mock courses data - replace with your actual data source
+        const courses = [
+            {
+                id: 1,
+                title: "Web Development Fundamentals",
+                category: "Technology",
+                description: "Master the basics of modern web development",
+                icon: "💻",
+                gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                overview: "This comprehensive course covers everything you need to know to start building modern websites. Learn HTML, CSS, JavaScript, and popular frameworks while working on real-world projects.",
+                duration: "8 weeks",
+                level: "Beginner",
+                students: "1,234",
+                instructor: {
+                    name: "Sarah Johnson",
+                    avatar: "👩‍💻",
+                    bio: "Senior Software Engineer with 10+ years of experience in web development and a passion for teaching."
+                },
+                resources: ["📄 Course Syllabus", "📄 Setup Guide", "📄 Project Templates", "📄 Additional Reading"]
+            }
+        ];
+
+        const courseId = 1; // In production, get from URL params
+        const course = courses.find(c => c.id == courseId) || courses[0];
+
+        if (course) {
+            // Populate hero section
+            const heroEl = document.getElementById('courseHero');
+            heroEl.style.background = course.gradient;
+            document.getElementById('heroCategory').textContent = course.category.toUpperCase();
+            document.getElementById('heroTitle').textContent = course.title;
+            document.getElementById('heroDescription').textContent = course.description;
+            document.getElementById('heroIcon').textContent = course.icon;
+            
+            // Populate course content
+            document.getElementById('courseOverview').textContent = course.overview;
+            document.getElementById('infoDuration').textContent = course.duration;
+            document.getElementById('infoLevel').textContent = course.level;
+            document.getElementById('infoStudents').textContent = course.students;
+            
+            // Populate instructor
+            document.getElementById('instructorAvatar').textContent = course.instructor.avatar;
+            document.getElementById('instructorName').textContent = course.instructor.name;
+            document.getElementById('instructorBio').textContent = course.instructor.bio;
+
+            // Populate resources
+            const resourcesList = document.getElementById('resourcesList');
+            resourcesList.innerHTML = '';
+            course.resources.forEach(resource => {
+                const li = document.createElement('li');
+                const parts = resource.split(' ');
+                const emoji = parts[0];
+                const text = parts.slice(1).join(' ');
+                li.innerHTML = `
+                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 p-3 rounded-lg transition-all group">
+                        <span class="text-xl">${emoji}</span>
+                        <span class="group-hover:translate-x-1 transition-transform">${text}</span>
+                    </a>
+                `;
+                resourcesList.appendChild(li);
+            });
+        }
+
+        function startQuiz() {
+            window.location.href = 'quiz.html';
+        }
+    </script>
+</body>
+</html>
